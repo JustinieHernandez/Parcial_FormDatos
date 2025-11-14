@@ -1,0 +1,229 @@
+/* style.css */
+
+:root {
+    --color-primario: #007bff; /* Azul */
+    --color-secundario: #6c757d; /* Gris */
+    --color-fondo: #5f88b1; /* Gris claro */
+    --color-texto: #343a40; /* Casi negro */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contenedor {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+}
+
+h2 {
+    color: var(--color-primario);
+    text-align: center;
+    border-bottom: 2px solid var(--color-primario);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+/* Estilos de formulario */
+.grupo-control {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="number"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    box-sizing: border-box; /* Asegura que padding no afecte el ancho total */
+}
+
+textarea {
+    resize: vertical;
+}
+
+.grupo-radio-checkbox label {
+    display: inline-block;
+    font-weight: normal;
+    margin-right: 15px;
+}
+
+/* Botón de envío */
+button[type="submit"] {
+    background-color: var(--color-primario);
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Mensajes de error y éxito */
+.error {
+    color: #dc3545; /* Rojo */
+    margin-bottom: 10px;
+    padding: 8px;
+    border: 1px solid #f5c6cb;
+    background-color: #f8d7da;
+    border-radius: 4px;
+}
+
+.exito {
+    color: #155724; /* Verde oscuro */
+    margin-bottom: 10px;
+    padding: 8px;
+    border: 1px solid #c3e6cb;
+    background-color: #d4edda;
+    border-radius: 4px;
+}
+
+/* Footer */
+footer {
+    margin-top: 30px;
+    padding: 10px;
+    background-color: var(--color-secundario);
+    color: white;
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+    border-radius: 4px;
+}
+
+/* Reporte (para reporte.php) */
+.tabla-reporte {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.tabla-reporte th, .tabla-reporte td {
+    border: 1px solid #dee2e6;
+    padding: 12px;
+    text-align: left;
+}
+
+.tabla-reporte th {
+    background-color: var(--color-primario);
+    color: white;
+    font-weight: bold;
+}
+
+.tabla-reporte tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.enlace-reporte {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    color: var(--color-primario);
+    text-decoration: none;
+    font-weight: bold;
+}
+.enlace-reporte:hover {
+    text-decoration: underline;
+}
+/* Nuevo estilo para el encabezado académico */
+.encabezado-academico {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 10px 0;
+    border-bottom: 3px solid var(--color-primario); /* Línea divisoria */
+}
+
+.logo-contenedor {
+    width: 100px; /* Tamaño fijo para el espacio de la imagen */
+    height: 100px;
+    background-color: #e9ecef; /* Color gris claro para visualizar el espacio */
+    border: 1px dashed var(--color-secundario);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8em;
+    text-align: center;
+    color: var(--color-secundario);
+}
+
+.texto-encabezado {
+    text-align: center;
+    flex-grow: 1; /* Permite que el texto ocupe el espacio central */
+}
+
+.texto-encabezado h1, .texto-encabezado h2, .texto-encabezado p {
+    margin: 0;
+    line-height: 1.2;
+}
+
+.texto-encabezado .utp {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #b30000; /* Color distintivo para UTP */
+}
+
+.texto-encabezado .facultad {
+    font-size: 1em;
+    font-weight: 500;
+}
+
+.texto-encabezado .campus {
+    font-size: 0.9em;
+    font-style: italic;
+    margin-top: 5px;
+}
+/* Nuevos Estilos para el Encabezado con Imágenes */
+.header-container {
+    width: 100%;
+    max-width: 600px; /* Igual al ancho del .contenedor */
+    margin: 0 auto;
+    position: relative; /* Contenedor de referencia para las esquinas */
+    height: 100px; /* Altura para el espacio de las imágenes */
+    margin-bottom: -70px; /* Sube el formulario para solapar y reducir espacio */
+}
+
+.logo {
+    position: absolute;
+    width: 80px; /* Tamaño fijo para los logos */
+    height: auto;
+    top: 10px;
+    z-index: 10; /* Asegura que estén sobre el contenedor del formulario */
+}
+
+/* Imagen a la Izquierda */
+.logo.izquierda {
+    left: 10px;
+}
+
+/* Imagen a la Derecha */
+.logo.derecha {
+    right: 10px;
+}
